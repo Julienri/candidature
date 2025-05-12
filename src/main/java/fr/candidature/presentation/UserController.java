@@ -34,9 +34,9 @@ public class UserController {
     }
 
     // desactiver un user
-    @PatchMapping("/{id}/disable")
-    public ResponseEntity<Void> disable(@PathVariable UUID id) {
-        userService.disable(id);
+    @PatchMapping("/{id}/deactivate")
+    public ResponseEntity<Void> deactivate(@PathVariable UUID id) {
+        userService.deactivate(id);
         return ResponseEntity.ok().build();
     }
 

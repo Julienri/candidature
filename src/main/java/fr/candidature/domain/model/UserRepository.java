@@ -5,9 +5,11 @@ import java.util.UUID;
 
 public interface UserRepository {
 
-    UUID create(User user);
+    void deleteById(UUID id);
 
     Optional<User> findById(UUID id);
 
-    void deleteById(UUID id);
+    Optional<User> findByEmail(String email);
+
+    void save(User user);
 }

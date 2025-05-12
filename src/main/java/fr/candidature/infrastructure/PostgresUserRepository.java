@@ -11,13 +11,17 @@ import java.util.UUID;
 public class PostgresUserRepository implements UserRepository {
 
     @Override
-    public UUID create(User user) {
-        return user.getId();
+    public void save(User user) {
     }
 
     @Override
     public Optional<User> findById(UUID id) {
         return null;
+    }
+
+    @Override
+    public Optional<User> findByEmail(String email) {
+        return Optional.empty();
     }
 
     @Override
