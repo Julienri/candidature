@@ -1,8 +1,5 @@
 package fr.candidature.domain.model;
 
-import fr.candidature.domain.event.UserActivateEvent;
-import fr.candidature.domain.event.UserDesactivateEvent;
-import fr.candidature.domain.event.UserEvent;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
@@ -31,14 +28,12 @@ public class User {
     public User() {
     }
 
-    public UserEvent activate() {
+    public void activate() {
         this.active = true;
-        return new UserActivateEvent(id);
     }
 
-    public UserEvent desactivate() {
+    public void deactivate() {
         this.active = false;
-        return new UserDesactivateEvent(id);
     }
 
 
