@@ -1,15 +1,10 @@
 package fr.candidature.domain.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-
 import java.util.Objects;
 import java.util.UUID;
 
-@Entity
 public class User {
 
-    @Id
     private UUID id;
     private String name;
     private String firstName;
@@ -35,7 +30,6 @@ public class User {
     public void deactivate() {
         this.active = false;
     }
-
 
     public UUID getId() {
         return id;
