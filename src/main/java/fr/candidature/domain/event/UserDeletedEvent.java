@@ -7,4 +7,9 @@ public class UserDeletedEvent extends UserEvent {
     public UserDeletedEvent(UUID userId) {
         super(userId);
     }
+
+    @Override
+    public String getEventType() {
+        return "USER_DELETED";
+    }
 }

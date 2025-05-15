@@ -9,6 +9,7 @@ public abstract class UserEvent {
     private final UUID userId;
     private final Instant time;
 
+    public abstract String getEventType();
 
     public UserEvent(UUID userId) {
         this.userId = userId;

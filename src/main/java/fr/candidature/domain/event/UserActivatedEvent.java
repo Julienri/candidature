@@ -7,4 +7,9 @@ public class UserActivatedEvent extends UserEvent {
     public UserActivatedEvent(UUID userId) {
         super(userId);
     }
+
+    @Override
+    public String getEventType() {
+        return "USER_ACTIVATED";
+    }
 }
