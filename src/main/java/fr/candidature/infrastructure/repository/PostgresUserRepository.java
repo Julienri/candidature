@@ -1,7 +1,8 @@
-package fr.candidature.infrastructure;
+package fr.candidature.infrastructure.repository;
 
 import fr.candidature.domain.model.User;
 import fr.candidature.domain.model.UserRepository;
+import fr.candidature.infrastructure.entity.UserMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package fr.candidature.presentation;
+package fr.candidature.presentation.controller;
 
 import fr.candidature.application.UserService;
 import fr.candidature.domain.model.User;
@@ -18,7 +18,6 @@ public class UserController {
         this.userService = userService;
     }
 
-    // création de user
     @PostMapping
     public ResponseEntity<UUID> create(@RequestBody UserDto userDto) {
         User user = UserMapper.toUtilisateur(userDto);
@@ -26,14 +25,12 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(uuid);
     }
 
-    // activer un user
     @PatchMapping("/{id}/activate")
     public ResponseEntity<Void> activate(@PathVariable UUID id) {
         userService.activate(id);
         return ResponseEntity.ok().build();
     }
 
-    // desactiver un user
     @PatchMapping("/{id}/deactivate")
     public ResponseEntity<Void> deactivate(@PathVariable UUID id) {
         userService.deactivate(id);

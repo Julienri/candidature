@@ -1,4 +1,4 @@
-package fr.candidature.infrastructure;
+package fr.candidature.infrastructure.entity;
 
 import fr.candidature.domain.model.User;
 import org.springframework.stereotype.Component;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserMapper {
 
-    User toDomain(UserEntity userEntity) {
+    public User toDomain(UserEntity userEntity) {
         return new User(
                 userEntity.getId(),
                 userEntity.getName(),
@@ -15,7 +15,7 @@ public class UserMapper {
                 userEntity.getActive());
     }
 
-    UserEntity toEntity(User user) {
+    public UserEntity toEntity(User user) {
         return new UserEntity(
                 user.getId(),
                 user.getName(),

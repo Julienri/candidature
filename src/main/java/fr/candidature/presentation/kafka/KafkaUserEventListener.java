@@ -1,4 +1,4 @@
-package fr.candidature.presentation;
+package fr.candidature.presentation.kafka;
 
 import fr.candidature.domain.event.UserActivatedEvent;
 import fr.candidature.domain.event.UserCreatedEvent;

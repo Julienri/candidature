@@ -1,5 +1,6 @@
-package fr.candidature.infrastructure;
+package fr.candidature.infrastructure.repository;
 
+import fr.candidature.infrastructure.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

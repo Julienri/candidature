@@ -1,4 +1,4 @@
-package fr.candidature.presentation;
+package fr.candidature.presentation.controller;
 
 import fr.candidature.domain.model.User;
 
