@@ -16,22 +16,22 @@ Il s'agit d'un **microservice simple** permettant de **créer, activer, désacti
 
 Le projet suit une séparation des responsabilités selon DDD :
 
-presentation/
-└── controller/ → API REST
-└── kafka/ → Listener
+### `presentation/`
+- `controller/` : expose l’API REST
+- `kafka/` : contient les listeners Kafka (consommateurs)
 
-application/
-└── service/ → Logique métier (UserService)
+### `application/`
+- `service/` : contient la logique métier (ex. : `UserService`)
 
-domain/
-├── model/ → Entité métier User
-├── event/ → Événements (UserCreatedEvent, etc.)
-└── exception/ → Exceptions
+### `domain/`
+- `model/` : contient l'entité métier `User`
+- `event/` : événements du domaine (ex. : `UserCreatedEvent`, `UserDeletedEvent`)
+- `exception/` : exceptions métier personnalisées
 
-infrastructure/
-├── entity/ → Entités JPA/hibernate (UserEntity)
-├── repository/ → Interfaces Spring Data JPA (PostgresUserRepository)
-└── kafka/ → Publisher
+### `infrastructure/`
+- `entity/` : entités JPA/Hibernate (`UserEntity`)
+- `repository/` : interfaces Spring Data JPA (`PostgresUserRepository`)
+- `kafka/` : publication des événements Kafka (`KafkaUserEventPublisher`)
 
 ## 🚀 Fonctionnalités
 
