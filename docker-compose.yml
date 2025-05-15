@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres-candidature
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: olivier
+      POSTGRES_PASSWORD: olivier
+      POSTGRES_DB: candidature
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - candidature-network
+
+volumes:
+  postgres-data:
+
+networks:
+  candidature-network:
