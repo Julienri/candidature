@@ -1,4 +1,4 @@
-package fr.candidature.infrastructure;
+package fr.candidature.infrastructure.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

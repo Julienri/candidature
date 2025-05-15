@@ -1,4 +1,4 @@
-package fr.candidature.infrastructure;
+package fr.candidature.infrastructure.kafka;
 
 import fr.candidature.domain.UserEventPublisher;
 import fr.candidature.domain.event.UserEvent;
